@@ -73,7 +73,7 @@ public class BaseTestCase {
 			System.out.println("NO SELENIUM GRID/NODE RUNNIG");
 		//e.printStackTrace();
 		//driver = new FirefoxDriver ();
-			System.setProperty("webdriver.chrome.driver", "/Users/sabarishsasidharan/Documents/workspace/ppsf/server/chromedriver 2");
+			System.setProperty("webdriver.chrome.driver", "/Users/sabarishsasidharan/git/ppf/ppsf/server/chromedriver 2");
 			driver = new ChromeDriver ();
 		}
 				
