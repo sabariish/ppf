@@ -1,6 +1,7 @@
 package com.ppsf.common;
 
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -40,22 +41,15 @@ public class BaseTestCase {
 		
 		
 		try {
-			InstantiateRemoteWebDriver ();
+			InstantiateWebDriver ();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
-	
-		
-		//driver = new FirefoxDriver();	
-	
-		
-	
 		
 	}
-	
 		
-	public void InstantiateRemoteWebDriver () throws IOException
+	private void InstantiateWebDriver () throws IOException
 	{
 	
 		String sBrowserName = DesiredCapabilities.firefox().getBrowserName();
@@ -70,11 +64,19 @@ public class BaseTestCase {
 		System.out.println("RAN VIA SELENIUM GRID");
 		}
 		catch (UnreachableBrowserException e){
-			System.out.println("NO SELENIUM GRID/NODE RUNNIG");
-		//e.printStackTrace();
-		//driver = new FirefoxDriver ();
-			System.setProperty("webdriver.chrome.driver", "/Users/sabarishsasidharan/git/ppf/ppsf/server/chromedriver 2");
-			driver = new ChromeDriver ();
+			switch (getPropValues_IORead ("driver.name")) {
+			case "chromeDriver":
+				System.setProperty("webdriver.chrome.driver", new File(getPropValues_IORead ("webdriver.chrome.driver")).getCanonicalPath());
+				driver = new ChromeDriver ();
+			break;
+			case "firefoxDriver":
+				driver = new FirefoxDriver();
+			break;
+			case "ieDriver":
+			break;
+			default:
+				break;
+			}
 		}
 				
 	}
@@ -96,18 +98,7 @@ public class BaseTestCase {
 	}
 	
 	
-	// Below method is just for testing purpose.
-	
-	/*@AfterMethod
-	public void TestcaseExit_Testing (ITestResult result) throws IOException, SQLException{
-		
-		
-		
-			ResultsDb.WriteResults_Testing(result);		
-		}
-	*/
-	
-	public void launchPage ()
+	protected void launchPage ()
 	{
 		try {
 			driver.get(getPropValues_IORead("sURL"));
