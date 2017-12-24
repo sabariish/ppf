@@ -11,11 +11,14 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.UnreachableBrowserException;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestResult;
 import org.testng.Reporter;
@@ -24,6 +27,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 
 import com.ppsf.verify.VerificationListener;
+
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 
 @Listeners(VerificationListener.class)
 public class BaseTestCase {
@@ -57,24 +63,54 @@ public class BaseTestCase {
 				
 		oCapability.setBrowserName(sBrowserName);
 		
-		String sHubURL = getPropValues_IORead ("sHubURL");
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("deviceName", "iPhone 6 Plus");
+        capabilities.setCapability("platformName", "iOS");
+        capabilities.setCapability("platformVersion", "9.2");
+        capabilities.setCapability("browserName", "safari");
+        AppiumDriverLocalService service=null;
+
+ 
 		
 		try{ 
-		driver = new RemoteWebDriver(new URL(sHubURL), oCapability);
-		System.out.println("RAN VIA SELENIUM GRID");
+		driver = new RemoteWebDriver(new URL(getPropValues_IORead ("sHubURL")), oCapability);
+		System.out.println("Running via Selenium GRID");
 		}
 		catch (UnreachableBrowserException e){
 			switch (getPropValues_IORead ("driver.name")) {
+			
 			case "chromeDriver":
 				System.setProperty("webdriver.chrome.driver", new File(getPropValues_IORead ("webdriver.chrome.driver")).getCanonicalPath());
 				driver = new ChromeDriver ();
 			break;
+			
 			case "firefoxDriver":
 				driver = new FirefoxDriver();
 			break;
+			
 			case "ieDriver":
+				System.setProperty("webdriver.ie.driver", new File(getPropValues_IORead ("webdriver.ie.driver")).getCanonicalPath());
+				driver = new InternetExplorerDriver ();
+
 			break;
+			
+			case "safariDriver":
+				driver = new SafariDriver ();
+
+			break;
+			
+			case "appiumDriver":
+				//driver = new RemoteWebDriver(new URL(getPropValues_IORead ("AppiumServerURL")), oCapability);
+			    service = AppiumDriverLocalService.buildDefaultService();
+				service.start();
+				driver = new IOSDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+
+			break;
+
 			default:
+				//throw new Exception("");
+				new Throwable("driver.name: "+getPropValues_IORead ("driver.name")+"is not supported. "
+						+ "Supported values: chromeDriver, appiumDriver, safariDriver, ieDriver & firefoxDriver");
 				break;
 			}
 		}
