@@ -108,10 +108,9 @@ public class BaseTestCase {
 			break;
 
 			default:
-				//throw new Exception("");
-				new Throwable("driver.name: "+getPropValues_IORead ("driver.name")+"is not supported. "
-						+ "Supported values: chromeDriver, appiumDriver, safariDriver, ieDriver & firefoxDriver");
-				break;
+				throw new PPFException.GENERAL_SCRIPT_ERROR("driver.name: "+getPropValues_IORead ("driver.name")+"is not supported. "
+								+ "Supported values: chromeDriver, appiumDriver, safariDriver, ieDriver & firefoxDriver");
+				
 			}
 		}
 				
