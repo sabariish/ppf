@@ -19,7 +19,7 @@ public class test extends BaseTestCase {
 		//GSP.edtSearchBox
 		
 		GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
-		GSIP.btnMagnifier.click();
+		//GSIP.btnMagnifier.click();
 		
 	}
 	
@@ -41,7 +41,7 @@ public class test extends BaseTestCase {
 		GoogleSearchPage GSP =  new GoogleSearchPage();
 		GSP.Invoke();
 		
-		Verify.PageInvoked(driver, "Google");
+		Verify.PageInvoked(GSP.driver, "Google");
 		Verify.ObjectExists(GSP.edtSearchBox, true, "Search Button Exists");
 		
 		GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
@@ -71,7 +71,7 @@ public class test extends BaseTestCase {
 		//String sHubUrl = "http://localhost:4444/wd/hub";
 		
 
-		driver.get("http://facebook.com");
+		//driver.get("http://facebook.com");
 		
 	}
 	

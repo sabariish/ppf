@@ -20,7 +20,7 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 
 public class BaseTestPage {
 	
-	public static WebDriver driver;
+	public static  WebDriver driver;
 	
 	public BaseTestPage (){
 		
