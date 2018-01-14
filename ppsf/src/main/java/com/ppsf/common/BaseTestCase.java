@@ -36,11 +36,6 @@ public class BaseTestCase {
 
 	
 	public static WebDriver driver;
-	
-	public BaseTestCase (){
-		
-		PageFactory.initElements(driver, this);
-	}
 
 	@BeforeMethod
 	public void TestcaseEnter (){
@@ -69,8 +64,6 @@ public class BaseTestCase {
         capabilities.setCapability("platformVersion", "9.2");
         capabilities.setCapability("browserName", "safari");
         AppiumDriverLocalService service=null;
-
- 
 		
 		try{ 
 		driver = new RemoteWebDriver(new URL(getPropValues_IORead ("sHubURL")), oCapability);

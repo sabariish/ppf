@@ -4,11 +4,10 @@ package com.ppsf.window;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import com.ppsf.common.BaseTestPage;
 
-import com.ppsf.common.BaseTestCase;
 
-
-public class GoogleSearchPage extends BaseTestCase{
+public class GoogleSearchPage extends BaseTestPage{
 	
 
 	@FindBy(name="q")

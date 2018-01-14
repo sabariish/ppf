@@ -15,7 +15,9 @@ public class test extends BaseTestCase {
 		GoogleSearchPage GSP =  new GoogleSearchPage();
 		GSP.Invoke();
 		GSP.edtSearchBox.sendKeys("Sabarish Just Rocks");
-				
+		
+		//GSP.edtSearchBox
+		
 		GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
 		GSIP.btnMagnifier.click();
 		
@@ -35,8 +37,7 @@ public class test extends BaseTestCase {
 	}
 	@Test
 	public void test3() {
-		
-	
+			
 		GoogleSearchPage GSP =  new GoogleSearchPage();
 		GSP.Invoke();
 		
