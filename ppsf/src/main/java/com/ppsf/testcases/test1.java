@@ -16,7 +16,7 @@ public class test1 extends BaseTestCase{
 		GSP.Invoke();
 		
 		Verify.PageInvoked(BaseTestPage.driver, "Google");
-		Verify.ObjectExists(GSP.edtSearchBox, true, "Search Button Exists");
+		Verify.ObjectExists(GSP.edtSearchBox, true);
 		
 	
 	}

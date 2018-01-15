@@ -15,7 +15,6 @@ public class test extends BaseTestCase {
 		GoogleSearchPage GSP =  new GoogleSearchPage();
 		GSP.Invoke();
 		GSP.edtSearchBox.sendKeys("Sabarish Just Rocks");
-		
 		//GSP.edtSearchBox
 		
 		GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
@@ -41,13 +40,12 @@ public class test extends BaseTestCase {
 		GoogleSearchPage GSP =  new GoogleSearchPage();
 		GSP.Invoke();
 		
-		Verify.PageInvoked(GSP.driver, "Google");
-		Verify.ObjectExists(GSP.edtSearchBox, true, "Search Button Exists");
+		//Verify.PageInvoked(GSP.driver, "Google");
+		Verify.ObjectExists(GSP.edtSearchBox, true);
+		//GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
 		
-		GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
-		
-		Verify.ObjectExists(GSIP.btnMagnifier, true, "Magnifier Exists");
-		Verify.ObjectExists(GSIP.btnMagnifier, false, "Magnifies button is not present");
+		//Verify.ObjectExists(GSIP.btnMagnifier, true);
+		//Verify.ObjectExists(GSIP.btnMagnifier, false);
 	
 	}
 

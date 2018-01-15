@@ -1,57 +1,70 @@
 package com.ppsf.verify;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
+//import java.io.PrintWriter;
+//import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
+//import org.testng.Assert;
 
 public class Verify {
 	
 	private static List<String> lsErrorMsgs= new ArrayList<String>();
-	private static List<StackTraceElement[]> lsStackStrace;
+	//private static List<StackTraceElement[]> lsStackStrace;
+
+	private static void OutputResult (boolean bMatch, Object actual,Object expected, String description)
+	{
+		if (bMatch) {
+			addVerificationPoint ("Passed", description);
+			System.out.println("Verification Passed: "+description);
+		}
+		else
+		{
+			addVerificationPoint ("Failed", description);
+			System.err.println("Verification Failed: "+description);
+
+		}
+		System.out.println("Expected: "+expected);
+		System.out.println("Actual: "+actual);
+	
+		
+	}
+	
+	private static void addVerificationPoint(String status, String description) {
+		
+		if (!status.contentEquals("Passed")) {
+			lsErrorMsgs.add(description);
+		}
+	}
 	
 	public static boolean Value (Object actual, Object expected, String sMessage){
 		
-		boolean bMatch = true;
+		boolean bMatch = false;
 		
-		try {	
-			Assert.assertEquals (actual, expected);
-			System.out.println("Verification Passed: "+sMessage);
-		
-		}
-				
-		catch(Throwable e){
-	
-			bMatch = false;
-			System.err.println("Verification Failed: "+sMessage);
-			addVerificationError (e);
-			return bMatch;	
-		}
-		
+			bMatch = actual.equals(expected);
+			OutputResult (bMatch, actual, expected, sMessage);
 		return bMatch;
 	
 	}
-	private static boolean AssertTrue (boolean bMatch){
+/*	private static boolean AssertTrue (boolean bMatch){
 		
 		try{
 		Assert.assertTrue(bMatch);
 		System.out.println("Verification Passed: String Matched in the Pattern");
 		}
 		catch (Throwable e){
-			addVerificationError (e);
+			addVerificationError (e, "Verification Failed: String did not match");
 			System.err.println("Verification Failed: String did not match");
 			return bMatch;
 		}
 		return bMatch;
-	}
+	}*/
 		
-	static void addVerificationError (Throwable e){
+/*	static void addVerificationError (Throwable e, String... message){
 	
 		String sError;
-		sError = e.getMessage();
+		sError = message[0] + " Exception: "+e.getMessage();
 		
 		StringWriter sw = new StringWriter();
 		PrintWriter pw = new PrintWriter(sw);
@@ -63,18 +76,18 @@ public class Verify {
 		lsErrorMsgs.add(sError);
 						
 				
-	}
+	}*/
 	
 	static List<String> getVerificationFailures(){
 		return lsErrorMsgs;
 	}
 			
-	static List<StackTraceElement[]> getStackTrace (Throwable e){
+/*	static List<StackTraceElement[]> getStackTrace (Throwable e){
 		
 		lsStackStrace.add(e.getStackTrace());
 		
 		return lsStackStrace; 
-	}
+	}*/
 	
 	static void removeAllErrors ()
 	{
@@ -82,9 +95,18 @@ public class Verify {
 	}
 	
 	
-	public static boolean ObjectExists (WebElement wObject, boolean bExpected, String sMessage){
-		
-				
+	public static boolean ObjectExists (WebElement wObject, boolean bExpected){
+		String sMessage="";
+		/*		String sMessage="";
+		String page = "";
+		if (bExpected) {
+			sMessage =wObject +" should exist on the page: "+page+".";
+		}
+		else
+		{
+			sMessage =wObject +" should *NOT* exist on the page: "+page+".";
+		}
+*/		
 		if (Verify.Value(wObject.isDisplayed(), bExpected, sMessage)){
 			return true;	
 		}
@@ -99,7 +121,7 @@ public class Verify {
 		
 		bMatch = sExpectedPattern.contains(sActual);
 		
-		Verify.AssertTrue(bMatch);
+		OutputResult (bMatch, sActual, sExpectedPattern, sDescription);
 		
 		return bMatch;
 	}
@@ -114,6 +136,16 @@ public class Verify {
 		return bPageFound;
 			
 		
+	}
+	
+	public static boolean ObjectExistsWithValue (WebElement wObject, String sObjectValue, String sDescription) {
+		boolean bReturn = false;
+		
+		if (Verify.ObjectExists(wObject, true)) {
+			
+		}
+		
+		return bReturn;
 	}
 	
 }

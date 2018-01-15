@@ -78,7 +78,7 @@ public class BaseTestPage {
 			break;
 
 			default:
-				throw new PPFException.GENERAL_SCRIPT_ERROR("driver.name: "+ConfigurationManager.getProperty ("driver.name")+"is not supported. "
+				throw new Exception.GENERAL_SCRIPT_ERROR("driver.name: "+ConfigurationManager.getProperty ("driver.name")+"is not supported. "
 								+ "Supported values: chromeDriver, appiumDriver, safariDriver, ieDriver & firefoxDriver");
 				
 			}

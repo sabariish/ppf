@@ -1,6 +1,6 @@
 package com.ppsf.common;
 
-public class PPFException  {
+public class Exception  {
 
 	private static final String FAILED ="Failed";
 	private static final String SCRIPT ="Script";
