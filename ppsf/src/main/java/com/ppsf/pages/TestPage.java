@@ -1,4 +1,4 @@
-package com.ppsf.window;
+package com.ppsf.pages;
 
 
 import com.ppsf.common.BaseTestPage;

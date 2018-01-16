@@ -15,6 +15,8 @@ import org.openqa.selenium.remote.UnreachableBrowserException;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import com.ppsf.elementfactory.ElementFactory;
+
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 
@@ -24,7 +26,8 @@ public class BaseTestPage {
 	
 	public BaseTestPage (){
 		
-		PageFactory.initElements(driver, this);
+		//PageFactory.initElements(driver, this);
+		ElementFactory.initElements(driver, this);
 	}
 
 	public static void InstantiateWebDriver () throws IOException

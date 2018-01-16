@@ -4,8 +4,8 @@ import org.testng.annotations.Test;
 
 import com.ppsf.common.BaseTestCase;
 import com.ppsf.common.BaseTestPage;
+import com.ppsf.pages.GoogleSearchPage;
 import com.ppsf.verify.Verify;
-import com.ppsf.window.GoogleSearchPage;
 
 public class test1 extends BaseTestCase{
 

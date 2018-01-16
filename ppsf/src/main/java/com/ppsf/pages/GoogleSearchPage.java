@@ -1,18 +1,19 @@
-package com.ppsf.window;
+package com.ppsf.pages;
 
 
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import com.ppsf.common.BaseTestPage;
+import com.ppsf.elementfactory.Element;
 
 
 public class GoogleSearchPage extends BaseTestPage{
 	
 
 	@FindBy(name="q")
-	public WebElement edtSearchBox;
-
+	public Element edtSearchBox;
+		
 	@FindBy(name="btnk")
 	public WebElement btnGoogleSearch;
 	

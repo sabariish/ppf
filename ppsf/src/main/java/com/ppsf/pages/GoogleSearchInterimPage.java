@@ -1,4 +1,4 @@
-package com.ppsf.window;
+package com.ppsf.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import com.ppsf.common.BaseTestPage;

@@ -3,9 +3,9 @@ package com.ppsf.testcases;
 import org.testng.annotations.Test;
 
 import com.ppsf.common.BaseTestCase;
+import com.ppsf.pages.GoogleSearchInterimPage;
+import com.ppsf.pages.GoogleSearchPage;
 import com.ppsf.verify.Verify;
-import com.ppsf.window.GoogleSearchInterimPage;
-import com.ppsf.window.GoogleSearchPage;
  
 public class test extends BaseTestCase {
 	
@@ -18,7 +18,7 @@ public class test extends BaseTestCase {
 		//GSP.edtSearchBox
 		
 		GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
-		//GSIP.btnMagnifier.click();
+		GSIP.btnMagnifier.click();
 		
 	}
 	
@@ -29,8 +29,8 @@ public class test extends BaseTestCase {
 		GSP.Invoke();
 		GSP.edtSearchBox.sendKeys("Sabarish Just Rocks");
 		
-		GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
-		GSIP.btnMagnifier.click();
+		//GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
+		//GSIP.btnMagnifier.click();
 		
 		
 	}
