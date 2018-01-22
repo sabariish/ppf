@@ -12,9 +12,9 @@ import java.util.Date;
 public class ResultsDb {
 
 	private static Connection connect() throws IOException {
-		String sDriver = BaseTestCase.getPropValues_IORead("driver");
-		String sUsername = BaseTestCase.getPropValues_IORead("username");
-		String sPassword = BaseTestCase.getPropValues_IORead("password");
+		String sDriver = ConfigurationManager.getProperty("driver");
+		String sUsername = ConfigurationManager.getProperty("username");
+		String sPassword = ConfigurationManager.getProperty("password");
 		Connection connection = null;	 
 						 
 				try {
@@ -88,47 +88,4 @@ public class ResultsDb {
 		stmt.executeUpdate(sql);
 		stmt.close();
 	}
-	
- 
-	
-public static void WriteResults_Testing (ITestResult result) throws SQLException{
-		
-		
-		String sTestCaseStatus = "NotRun";
-		
-		// TestCase Run Status
-		if (result.isSuccess()){
-			sTestCaseStatus = "Passed";
-		}
-		if (result.getStatus()==2){
-			sTestCaseStatus = "Failed";
-		}
-		if (result.getStatus()==3){
-			sTestCaseStatus = "Skipped";
-		}
-		
-		// Testcase Name
-		String sTestName = result.getMethod().getMethodName();
-		Throwable sErrorMessage = result.getThrowable();
-		// Test Elapsed Time
-		long lElapsedTime = (result.getEndMillis() - result.getStartMillis())/1000;
-
-		// Execution Date
-		SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-DD-hh-mm-ss");
-		String sExecutionDate = sdf.format(new Date ());
-		
-		
-		System.out.println("Her Iam................START");
-		System.out.println(sTestName);
-		System.out.println(sTestCaseStatus);
-		System.out.println(sErrorMessage);
-		System.out.println(lElapsedTime);
-		System.out.println(sExecutionDate);
-		
-		System.out.println("Her Iam................ END");
-		
-	}
-	
-	
-	
 }

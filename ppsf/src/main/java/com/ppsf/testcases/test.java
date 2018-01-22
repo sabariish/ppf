@@ -3,9 +3,9 @@ package com.ppsf.testcases;
 import org.testng.annotations.Test;
 
 import com.ppsf.common.BaseTestCase;
+import com.ppsf.pages.GoogleSearchInterimPage;
+import com.ppsf.pages.GoogleSearchPage;
 import com.ppsf.verify.Verify;
-import com.ppsf.window.GoogleSearchInterimPage;
-import com.ppsf.window.GoogleSearchPage;
  
 public class test extends BaseTestCase {
 	
@@ -14,8 +14,9 @@ public class test extends BaseTestCase {
 
 		GoogleSearchPage GSP =  new GoogleSearchPage();
 		GSP.Invoke();
-		GSP.edtSearchBox.sendKeys("Sabarish Just Rocks");
-				
+		GSP.edtSearchBox.sendKeys("Sabarish");
+		//GSP.edtSearchBox
+		
 		GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
 		GSIP.btnMagnifier.click();
 		
@@ -26,27 +27,25 @@ public class test extends BaseTestCase {
 
 		GoogleSearchPage GSP =  new GoogleSearchPage();
 		GSP.Invoke();
-		GSP.edtSearchBox.sendKeys("Sabarish Just Rocks");
+		GSP.edtSearchBox.sendKeys("Sabarish");
 		
-		GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
-		GSIP.btnMagnifier.click();
+		//GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
+		//GSIP.btnMagnifier.click();
 		
 		
 	}
 	@Test
 	public void test3() {
-		
-	
+			
 		GoogleSearchPage GSP =  new GoogleSearchPage();
 		GSP.Invoke();
+		GSP.linkGmail.click();
+		//Verify.PageInvoked(GSP.driver, "Google");
+		//Verify.ObjectExists(GSP.edtSearchBox, true);
+		//GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
 		
-		Verify.PageInvoked(driver, "Google");
-		Verify.ObjectExists(GSP.edtSearchBox, true, "Search Button Exists");
-		
-		GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
-		
-		Verify.ObjectExists(GSIP.btnMagnifier, true, "Magnifier Exists");
-		Verify.ObjectExists(GSIP.btnMagnifier, false, "Magnifies button is not present");
+		//Verify.ObjectExists(GSIP.btnMagnifier, true);
+		//Verify.ObjectExists(GSIP.btnMagnifier, false);
 	
 	}
 
@@ -70,7 +69,7 @@ public class test extends BaseTestCase {
 		//String sHubUrl = "http://localhost:4444/wd/hub";
 		
 
-		driver.get("http://facebook.com");
+		//driver.get("http://facebook.com");
 		
 	}
 	
