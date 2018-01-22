@@ -1,4 +1,4 @@
-package com.ppsf.interfaces.html;
+package com.ppsf.element;
 
 import org.openqa.selenium.Rectangle;
 import com.ppsf.classes.html.PPSFHtmlLink;
