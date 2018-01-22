@@ -1,6 +1,6 @@
 package com.ppsf.common;
 
-public class Exception  {
+public class TAFException  {
 
 	private static final String FAILED ="Failed";
 	private static final String SCRIPT ="Script";

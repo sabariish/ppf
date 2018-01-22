@@ -2,6 +2,8 @@ package com.ppsf.elementfactory;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
+import com.ppsf.common.TAFException;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
@@ -39,7 +41,7 @@ public class ElementHandler implements InvocationHandler {
             if ("toString".equals(method.getName())) {
                 return "Proxy element for: " + locator.toString();
             }
-            throw new com.ppsf.common.Exception.EXPECTED_OBJECT_NOT_FOUND(locator.toString()+" Not Found");
+            throw new TAFException.EXPECTED_OBJECT_NOT_FOUND(locator.toString()+" Not Found");
         }
         if ("getWrappedElement".equals(method.getName())) {
             return element;
