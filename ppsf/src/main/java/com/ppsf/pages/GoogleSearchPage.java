@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import com.ppsf.common.BaseTestPage;
 import com.ppsf.elementfactory.Element;
+import com.ppsf.interfaces.html.HtmlLink;
 
 
 public class GoogleSearchPage extends BaseTestPage{
@@ -15,9 +16,11 @@ public class GoogleSearchPage extends BaseTestPage{
 	public Element edtSearchBox;
 		
 	@FindBy(name="btnk")
-	public WebElement btnGoogleSearch;
+	public Element btnGoogleSearch;
 	
-	
+	@FindBy(xpath="//a[text()='Gmail']")
+	public HtmlLink linkGmail;
+
 	
 	public void Invoke () 
 	{

@@ -5,30 +5,31 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Proxy;
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.internal.Locatable;
+import org.openqa.selenium.internal.WrapsElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
-import org.openqa.selenium.support.pagefactory.ElementLocator;
-import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
-import org.openqa.selenium.support.pagefactory.FieldDecorator;
 
-public class ElementDecorator implements FieldDecorator {
+public class PPSFFieldDecorator implements FieldDecorator {
     /* factory to use when generating ElementLocator. */
     protected ElementLocatorFactory factory;
 
     /* Constructor for an ElementLocatorFactory. */
-    public ElementDecorator(ElementLocatorFactory factory) {
+    public PPSFFieldDecorator(ElementLocatorFactory factory) {
         this.factory = factory;
     }
 
-    @Override
+  /*  @Override
     public Object decorate(ClassLoader loader, Field field) {
-        if (!(WebElement.class.isAssignableFrom(field.getType()) || isDecoratableList(field))) {
+    		if (!(WebElement.class.isAssignableFrom(field.getType()) || isDecoratableList(field))) {
             return null;
         }
-        ElementLocator locator = factory.createLocator(field);
+        ElementLocator locator =  factory.createLocator(field);
         if (locator == null) {
             return null;
         }
@@ -36,7 +37,7 @@ public class ElementDecorator implements FieldDecorator {
         if (WebElement.class.equals(fieldType)) {
             fieldType = Element.class;
         }
-
+        
         if (WebElement.class.isAssignableFrom(fieldType)) {
             return proxyForLocator(loader, fieldType, locator);
         } else if (List.class.isAssignableFrom(fieldType)) {
@@ -46,7 +47,7 @@ public class ElementDecorator implements FieldDecorator {
             return null;
         }
     }
-
+*/
     private Class getErasureClass(Field field) {
         Type genericType = field.getGenericType();
         if (!(genericType instanceof ParameterizedType)) {
@@ -72,10 +73,10 @@ public class ElementDecorator implements FieldDecorator {
     /* Generate a type-parameterized locator proxy for the element in question. */
     protected <T> T proxyForLocator(ClassLoader loader, Class<T> interfaceType, ElementLocator locator) {
         InvocationHandler handler = new ElementHandler(interfaceType, locator);
-
+        
         T proxy;
         proxy = interfaceType.cast(Proxy.newProxyInstance(
-                loader, new Class[]{interfaceType, WebElement.class}, handler));
+                loader, new Class[]{interfaceType, WebElement.class, WrapsElement.class, Locatable.class}, handler));
         return proxy;
     }
 
@@ -89,4 +90,28 @@ public class ElementDecorator implements FieldDecorator {
                 loader, new Class[]{List.class}, handler);
         return proxy;
     }
-}
+
+	@Override
+	public Object decorate(ClassLoader loader, Field field, Object pageName) {
+  		if (!(WebElement.class.isAssignableFrom(field.getType()) || isDecoratableList(field))) {
+            return null;
+        }
+        ElementLocator locator =  factory.createLocator(field, pageName);
+        if (locator == null) {
+            return null;
+        }
+        Class<?> fieldType = field.getType();
+        if (WebElement.class.equals(fieldType)) {
+            fieldType = Element.class;
+        }
+        
+        if (WebElement.class.isAssignableFrom(fieldType)) {
+            return proxyForLocator(loader, fieldType, locator);
+        } else if (List.class.isAssignableFrom(fieldType)) {
+            Class<?> erasureClass = getErasureClass(field);
+            return proxyForListLocator(loader, erasureClass, locator);
+        } else {
+            return null;
+        }
+	}
+	}

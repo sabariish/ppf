@@ -14,7 +14,7 @@ public class test extends BaseTestCase {
 
 		GoogleSearchPage GSP =  new GoogleSearchPage();
 		GSP.Invoke();
-		GSP.edtSearchBox.sendKeys("Sabarish Just Rocks");
+		GSP.edtSearchBox.sendKeys("Sabarish");
 		//GSP.edtSearchBox
 		
 		GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
@@ -27,7 +27,7 @@ public class test extends BaseTestCase {
 
 		GoogleSearchPage GSP =  new GoogleSearchPage();
 		GSP.Invoke();
-		GSP.edtSearchBox.sendKeys("Sabarish Just Rocks");
+		GSP.edtSearchBox.sendKeys("Sabarish");
 		
 		//GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
 		//GSIP.btnMagnifier.click();
@@ -39,9 +39,9 @@ public class test extends BaseTestCase {
 			
 		GoogleSearchPage GSP =  new GoogleSearchPage();
 		GSP.Invoke();
-		
+		GSP.linkGmail.click();
 		//Verify.PageInvoked(GSP.driver, "Google");
-		Verify.ObjectExists(GSP.edtSearchBox, true);
+		//Verify.ObjectExists(GSP.edtSearchBox, true);
 		//GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
 		
 		//Verify.ObjectExists(GSIP.btnMagnifier, true);

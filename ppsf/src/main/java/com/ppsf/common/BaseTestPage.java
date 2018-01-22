@@ -13,8 +13,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.UnreachableBrowserException;
 import org.openqa.selenium.safari.SafariDriver;
-import org.openqa.selenium.support.PageFactory;
-
 import com.ppsf.elementfactory.ElementFactory;
 
 import io.appium.java_client.ios.IOSDriver;
