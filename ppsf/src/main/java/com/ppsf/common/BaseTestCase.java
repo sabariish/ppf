@@ -47,7 +47,7 @@ public class BaseTestCase {
 	}
 	
 	@DataProvider (name="tcData")
-	public Object[][] userFormData() throws Throwable
+	public Object[][] getTCData() throws Throwable
     {
         Object[][] data = new TestDataFactory().getData().getTCInputData();
         return data;
