@@ -22,12 +22,12 @@ public class test extends BaseTestCase {
 		
 	}
 	
-	@Test
-	public void test2() {
+	@Test(dataProvider = "tcData")
+	public void test2(String username, String pass) {
 
 		GoogleSearchPage GSP =  new GoogleSearchPage();
 		GSP.Invoke();
-		GSP.edtSearchBox.sendKeys("Sabarish");
+		GSP.edtSearchBox.sendKeys(username);
 		
 		//GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
 		//GSIP.btnMagnifier.click();

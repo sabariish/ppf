@@ -6,7 +6,10 @@ import java.sql.SQLException;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
+
+import com.ppsf.datafactory.TestDataFactory;
 import com.ppsf.verify.VerificationListener;
 
 
@@ -43,6 +46,12 @@ public class BaseTestCase {
 						
 	}
 	
+	@DataProvider (name="tcData")
+	public Object[][] userFormData() throws Throwable
+    {
+        Object[][] data = new TestDataFactory().getData().getTCInputData();
+        return data;
+    }
 
 	}
 

@@ -1,12 +1,9 @@
 package com.ppsf.pages;
 
-
-
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import com.ppsf.common.BaseTestPage;
+import com.ppsf.element.HtmlLink;
 import com.ppsf.elementfactory.Element;
-import com.ppsf.interfaces.html.HtmlLink;
 
 
 public class GoogleSearchPage extends BaseTestPage{

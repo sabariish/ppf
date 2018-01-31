@@ -2,8 +2,8 @@ package com.ppsf.classes.html;
 
 import org.openqa.selenium.WebElement;
 import com.ppsf.elementfactory.PPSFWebElement;
-import com.ppsf.interfaces.html.HtmlLink;
 import com.ppsf.common.TAFException;
+import com.ppsf.element.HtmlLink;
 public class PPSFHtmlLink extends PPSFWebElement implements HtmlLink{
 
 	public PPSFHtmlLink(WebElement element) {
