@@ -1,9 +1,6 @@
 package com.ppsf.testcases;
 
-import java.util.List;
-
 import org.testng.annotations.Test;
-
 import com.ppsf.common.BaseTestCase;
 import com.ppsf.datafactory.TCData;
 import com.ppsf.pages.GoogleSearchInterimPage;
@@ -24,8 +21,8 @@ public class test extends BaseTestCase {
 		GSIP.btnMagnifier.click();
 		
 	}
-	//@Test(dataProvider = "tcData_FromXls_SingleRow")
-	@Test(dataProvider = "tcData_FromXls_MultipleRows")
+	//@Test(dataProvider = "tcData_SingleRow")
+	@Test(dataProvider = "tcData_MultipleRows")
 	public void sabarish(TCData tcdata) {
 		GoogleSearchPage GSP =  new GoogleSearchPage();
 		GSP.Invoke();

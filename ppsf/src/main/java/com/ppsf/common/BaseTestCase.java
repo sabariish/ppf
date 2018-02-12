@@ -47,15 +47,15 @@ public class BaseTestCase {
 						
 	}
 	
-	@DataProvider (name="tcData_FromXls_SingleRow")
+	@DataProvider (name="tcData_SingleRow")
 	public Object[][] getTCData(Method m) throws IOException 
     {
         Object[][] data = new TestDataFactory().getData().getTCInputData(m.getName());
         return data;
     }
 
-	@DataProvider(name = "tcData_FromXls_MultipleRows")
-	public Iterator<Object[]> getTCDataFromXls() throws IOException
+	@DataProvider(name = "tcData_MultipleRows")
+	public Iterator<Object[]> getTCData() throws IOException
 	{
 		
 	    return new TestDataFactory().getData().getTCInputData();
