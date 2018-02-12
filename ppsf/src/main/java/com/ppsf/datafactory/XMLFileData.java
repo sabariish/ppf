@@ -1,5 +1,7 @@
 package com.ppsf.datafactory;
 
+import java.util.Iterator;
+
 public class XMLFileData implements ITestData{
 
 	@Override
@@ -9,7 +11,7 @@ public class XMLFileData implements ITestData{
 	}
 
 	@Override
-	public Object[][] getTCInputData() {
+	public Iterator<Object[]> getTCInputData() {
 		// TODO Auto-generated method stub
 		return null;
 	}

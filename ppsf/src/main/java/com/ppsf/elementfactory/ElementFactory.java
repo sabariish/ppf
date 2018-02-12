@@ -1,15 +1,9 @@
 package com.ppsf.elementfactory;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.pagefactory.Annotations;
 
 public class ElementFactory {
     public static Map<String, Object> metaData = new HashMap <String, Object>();

@@ -1,8 +1,11 @@
 package com.ppsf.testcases;
 
+import java.util.List;
+
 import org.testng.annotations.Test;
 
 import com.ppsf.common.BaseTestCase;
+import com.ppsf.datafactory.TCData;
 import com.ppsf.pages.GoogleSearchInterimPage;
 import com.ppsf.pages.GoogleSearchPage;
 import com.ppsf.verify.Verify;
@@ -21,13 +24,13 @@ public class test extends BaseTestCase {
 		GSIP.btnMagnifier.click();
 		
 	}
-	
-	@Test(dataProvider = "tcData")
-	public void test2(String username, String pass) {
-
+	//@Test(dataProvider = "tcData_FromXls_SingleRow")
+	@Test(dataProvider = "tcData_FromXls_MultipleRows")
+	public void sabarish(TCData tcdata) {
 		GoogleSearchPage GSP =  new GoogleSearchPage();
 		GSP.Invoke();
-		GSP.edtSearchBox.sendKeys(username);
+		System.out.println(tcdata.getUsername());
+		GSP.edtSearchBox.sendKeys(tcdata.getUsername());
 		
 		//GoogleSearchInterimPage GSIP = new GoogleSearchInterimPage();
 		//GSIP.btnMagnifier.click();

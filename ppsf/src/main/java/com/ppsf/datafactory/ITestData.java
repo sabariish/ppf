@@ -1,8 +1,10 @@
 package com.ppsf.datafactory;
 
+import java.util.Iterator;
+
 public interface ITestData {
 
 	public Object[][] getTCInputData (String tcid);
-	public Object[][] getTCInputData () throws Throwable;
+	public Iterator<Object[]> getTCInputData ();
 	
 }

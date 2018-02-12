@@ -2,13 +2,14 @@ package com.ppsf.common;
 
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.sql.SQLException;
+import java.util.Iterator;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
-
 import com.ppsf.datafactory.TestDataFactory;
 import com.ppsf.verify.VerificationListener;
 
@@ -46,12 +47,19 @@ public class BaseTestCase {
 						
 	}
 	
-	@DataProvider (name="tcData")
-	public Object[][] getTCData() throws Throwable
+	@DataProvider (name="tcData_FromXls_SingleRow")
+	public Object[][] getTCData(Method m) throws IOException 
     {
-        Object[][] data = new TestDataFactory().getData().getTCInputData();
+        Object[][] data = new TestDataFactory().getData().getTCInputData(m.getName());
         return data;
     }
 
+	@DataProvider(name = "tcData_FromXls_MultipleRows")
+	public Iterator<Object[]> getTCDataFromXls() throws IOException
+	{
+		
+	    return new TestDataFactory().getData().getTCInputData();
+	}
+	
 	}
 
