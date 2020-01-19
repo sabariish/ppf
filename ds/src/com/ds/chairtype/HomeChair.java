@@ -1,12 +1,12 @@
 package com.ds.chairtype;
 
-import com.ds.chair.ChairType;
+import com.ds.chair.Chair;
 
 public class HomeChair implements ChairKind{
 
-	ChairType chair;
+	Chair chair;
 	   
-	public HomeChair(ChairType chair) {
+	public HomeChair(Chair chair) {
 		   this.chair=chair;
 		   this.chair.setFoamType("jute");
 		   this.chair.setLegType("rubbered");

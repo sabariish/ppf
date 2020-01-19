@@ -1,6 +1,6 @@
 package com.ds.chair;
 
-public abstract class ChairType {
+public abstract class Chair {
 
 	String foamType;
 	String legType;

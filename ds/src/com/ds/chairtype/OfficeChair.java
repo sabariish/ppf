@@ -1,11 +1,11 @@
 package com.ds.chairtype;
 
-import com.ds.chair.ChairType;
+import com.ds.chair.Chair;
 
 public class OfficeChair implements ChairKind{
-   ChairType chair;
+   Chair chair;
    
-   public  OfficeChair(ChairType chair) {
+   public  OfficeChair(Chair chair) {
 	// TODO Auto-generated constructor stub
 	   this.chair=chair;
 	   this.chair.setFoamType("artificial");

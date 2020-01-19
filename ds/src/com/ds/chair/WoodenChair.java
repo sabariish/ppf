@@ -1,6 +1,6 @@
 package com.ds.chair;
 
-public class WoodenChair extends ChairType{
+public class WoodenChair extends Chair{
 
 	public WoodenChair() {
 		typeOfChair="Wooden";
