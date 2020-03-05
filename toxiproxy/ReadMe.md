@@ -1,4 +1,4 @@
-Credits: https://github.com/Shopify/toxiproxy
+https://github.com/Shopify/toxiproxy
 
 Java-client example for ToxiProxy with a Windows server.
 
