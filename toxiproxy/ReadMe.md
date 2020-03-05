@@ -8,3 +8,6 @@ or
 - mvn integration-test
 
 There are 6 tests.
+
+Preconditions:
+Make sure to have couple of applications running on ports 5000 and 3000. I used a sample react node app to play around.
