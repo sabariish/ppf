@@ -1,0 +1,25 @@
+<requestrepository>
+  <sample>
+    <reqwithbody1>
+    	   <baseUrl>http://localhost:8888</baseUrl>
+       <endPoint>/</endPoint>
+       <method>GET</method>
+     </reqwithbody1>
+         <reqwithbody2>
+    	   <baseUrl>http://localhost:8889</baseUrl>
+       <endPoint>/api/toroute</endPoint>
+       <method>GET</method>
+     </reqwithbody2>
+    <!-- using CDATA to provide inline xml body
+    <reqwithbody2>
+       <endPoint>/myservice-endpoint</endPoint>
+       <headers>{'Content-Type': 'application/xml'}</headers>
+      <body>
+          <![CDATA[
+            <message> here is xml body!... </message>
+          ]]>
+      </body>
+    </reqwithbody2>-->
+
+  </sample>
+</requestrepository>
