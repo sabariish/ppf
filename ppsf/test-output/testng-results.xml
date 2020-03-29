@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+    <line>
+      <![CDATA[Result from getPropValues:http://localhost:4444/wd/hub]]>
+    </line>
+    <line>
+      <![CDATA[Result from getPropValues:http://www.google.com ]]>
+    </line>
+    <line>
+      <![CDATA[Result from getPropValues:false]]>
+    </line>
+    <line>
+      <![CDATA[Result from getPropValues:http://localhost:4444/wd/hub]]>
+    </line>
+    <line>
+      <![CDATA[Result from getPropValues:http://www.google.com ]]>
+    </line>
+    <line>
+      <![CDATA[Result from getPropValues:false]]>
+    </line>
+    <line>
+      <![CDATA[Result from getPropValues:http://localhost:4444/wd/hub]]>
+    </line>
+    <line>
+      <![CDATA[Result from getPropValues:http://www.google.com ]]>
+    </line>
+    <line>
+      <![CDATA[Result from getPropValues:false]]>
+    </line>
+    <line>
+      <![CDATA[Result from getPropValues:http://localhost:4444/wd/hub]]>
+    </line>
+    <line>
+      <![CDATA[Result from getPropValues:false]]>
+    </line>
+    <line>
+      <![CDATA[Result from getPropValues:http://localhost:4444/wd/hub]]>
+    </line>
+    <line>
+      <![CDATA[Result from getPropValues:false]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite" duration-ms="16094" started-at="2017-07-23T03:36:15Z" finished-at="2017-07-23T03:36:31Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="16094" started-at="2017-07-23T03:36:15Z" finished-at="2017-07-23T03:36:31Z">
+      <class name="com.ppsf.testcases.test">
+        <test-method status="PASS" signature="TestcaseEnter()[pri:0, instance:com.ppsf.testcases.test@30b688e1]" name="TestcaseEnter" is-config="true" duration-ms="3183" started-at="2017-07-22T20:36:15Z" finished-at="2017-07-22T20:36:19Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Result from getPropValues:http://localhost:4444/wd/hub]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestcaseEnter -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:com.ppsf.testcases.test@30b688e1]" name="test1" duration-ms="2730" started-at="2017-07-22T20:36:19Z" finished-at="2017-07-22T20:36:21Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Result from getPropValues:http://www.google.com ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="TestcaseExit(org.testng.ITestResult)[pri:0, instance:com.ppsf.testcases.test@30b688e1]" name="TestcaseExit" is-config="true" duration-ms="85" started-at="2017-07-22T20:36:21Z" finished-at="2017-07-22T20:36:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test1 status=SUCCESS method=test.test1()[pri:0, instance:com.ppsf.testcases.test@30b688e1] output=Result from getPropValues:http://www.google.com ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Result from getPropValues:false]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestcaseExit -->
+        <test-method status="PASS" signature="TestcaseEnter()[pri:0, instance:com.ppsf.testcases.test@30b688e1]" name="TestcaseEnter" is-config="true" duration-ms="1053" started-at="2017-07-22T20:36:21Z" finished-at="2017-07-22T20:36:22Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Result from getPropValues:http://localhost:4444/wd/hub]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestcaseEnter -->
+        <test-method status="PASS" signature="test2()[pri:0, instance:com.ppsf.testcases.test@30b688e1]" name="test2" duration-ms="2149" started-at="2017-07-22T20:36:22Z" finished-at="2017-07-22T20:36:25Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Result from getPropValues:http://www.google.com ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="TestcaseExit(org.testng.ITestResult)[pri:0, instance:com.ppsf.testcases.test@30b688e1]" name="TestcaseExit" is-config="true" duration-ms="79" started-at="2017-07-22T20:36:25Z" finished-at="2017-07-22T20:36:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test2 status=SUCCESS method=test.test2()[pri:0, instance:com.ppsf.testcases.test@30b688e1] output=Result from getPropValues:http://www.google.com ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Result from getPropValues:false]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestcaseExit -->
+        <test-method status="PASS" signature="TestcaseEnter()[pri:0, instance:com.ppsf.testcases.test@30b688e1]" name="TestcaseEnter" is-config="true" duration-ms="1148" started-at="2017-07-22T20:36:25Z" finished-at="2017-07-22T20:36:26Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Result from getPropValues:http://localhost:4444/wd/hub]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestcaseEnter -->
+        <test-method status="FAIL" signature="test3()[pri:0, instance:com.ppsf.testcases.test@30b688e1]" name="test3" duration-ms="1589" started-at="2017-07-22T20:36:26Z" finished-at="2017-07-22T20:36:27Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Number of  verification failures: (1)
+(1)expected [true] but found [false]java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:179)
+	at com.ppsf.verify.Verify.Value(Verify.java:21)
+	at com.ppsf.verify.Verify.ObjectExists(Verify.java:88)
+	at com.ppsf.testcases.test.test3(test.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Number of  verification failures: (1)
+(1)expected [true] but found [false]java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:179)
+	at com.ppsf.verify.Verify.Value(Verify.java:21)
+	at com.ppsf.verify.Verify.ObjectExists(Verify.java:88)
+	at com.ppsf.testcases.test.test3(test.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+
+
+	at com.ppsf.verify.VerificationListener.afterInvocation(VerificationListener.java:32)
+	at org.testng.internal.invokers.InvokedMethodListenerInvoker$InvokeAfterInvocationWithoutContextStrategy.callMethod(InvokedMethodListenerInvoker.java:100)
+	at org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:62)
+	at org.testng.internal.Invoker.runInvokedMethodListeners(Invoker.java:556)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:699)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+            <line>
+              <![CDATA[Result from getPropValues:http://www.google.com ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method status="PASS" signature="TestcaseExit(org.testng.ITestResult)[pri:0, instance:com.ppsf.testcases.test@30b688e1]" name="TestcaseExit" is-config="true" duration-ms="73" started-at="2017-07-22T20:36:27Z" finished-at="2017-07-22T20:36:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test3 status=FAILURE method=test.test3()[pri:0, instance:com.ppsf.testcases.test@30b688e1] output=Result from getPropValues:http://www.google.com ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Result from getPropValues:false]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestcaseExit -->
+        <test-method status="PASS" signature="TestcaseEnter()[pri:0, instance:com.ppsf.testcases.test@30b688e1]" name="TestcaseEnter" is-config="true" duration-ms="1073" started-at="2017-07-22T20:36:27Z" finished-at="2017-07-22T20:36:29Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Result from getPropValues:http://localhost:4444/wd/hub]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestcaseEnter -->
+        <test-method status="PASS" signature="test4()[pri:0, instance:com.ppsf.testcases.test@30b688e1]" name="test4" duration-ms="1613" started-at="2017-07-22T20:36:29Z" finished-at="2017-07-22T20:36:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4 -->
+        <test-method status="PASS" signature="TestcaseExit(org.testng.ITestResult)[pri:0, instance:com.ppsf.testcases.test@30b688e1]" name="TestcaseExit" is-config="true" duration-ms="79" started-at="2017-07-22T20:36:30Z" finished-at="2017-07-22T20:36:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test4 status=SUCCESS method=test.test4()[pri:0, instance:com.ppsf.testcases.test@30b688e1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Result from getPropValues:false]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestcaseExit -->
+        <test-method status="PASS" signature="TestcaseEnter()[pri:0, instance:com.ppsf.testcases.test@30b688e1]" name="TestcaseEnter" is-config="true" duration-ms="1099" started-at="2017-07-22T20:36:30Z" finished-at="2017-07-22T20:36:31Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Result from getPropValues:http://localhost:4444/wd/hub]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestcaseEnter -->
+        <test-method status="FAIL" signature="test5()[pri:0, instance:com.ppsf.testcases.test@30b688e1]" name="test5" duration-ms="2" started-at="2017-07-22T20:36:31Z" finished-at="2017-07-22T20:36:31Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Number of  verification failures: (2)
+(1)expected [true] but found [false]java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.ppsf.verify.Verify.AssertTrue(Verify.java:40)
+	at com.ppsf.verify.Verify.StringMatch(Verify.java:102)
+	at com.ppsf.testcases.test.test5(test.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+
+(2)expected [true] but found [false]java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.ppsf.verify.Verify.AssertTrue(Verify.java:40)
+	at com.ppsf.verify.Verify.StringMatch(Verify.java:102)
+	at com.ppsf.testcases.test.test5(test.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Number of  verification failures: (2)
+(1)expected [true] but found [false]java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.ppsf.verify.Verify.AssertTrue(Verify.java:40)
+	at com.ppsf.verify.Verify.StringMatch(Verify.java:102)
+	at com.ppsf.testcases.test.test5(test.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+
+(2)expected [true] but found [false]java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.ppsf.verify.Verify.AssertTrue(Verify.java:40)
+	at com.ppsf.verify.Verify.StringMatch(Verify.java:102)
+	at com.ppsf.testcases.test.test5(test.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+
+
+	at com.ppsf.verify.VerificationListener.afterInvocation(VerificationListener.java:32)
+	at org.testng.internal.invokers.InvokedMethodListenerInvoker$InvokeAfterInvocationWithoutContextStrategy.callMethod(InvokedMethodListenerInvoker.java:100)
+	at org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:62)
+	at org.testng.internal.Invoker.runInvokedMethodListeners(Invoker.java:556)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:699)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test5 -->
+        <test-method status="PASS" signature="TestcaseExit(org.testng.ITestResult)[pri:0, instance:com.ppsf.testcases.test@30b688e1]" name="TestcaseExit" is-config="true" duration-ms="75" started-at="2017-07-22T20:36:31Z" finished-at="2017-07-22T20:36:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test5 status=FAILURE method=test.test5()[pri:0, instance:com.ppsf.testcases.test@30b688e1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Result from getPropValues:false]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestcaseExit -->
+      </class> <!-- com.ppsf.testcases.test -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
