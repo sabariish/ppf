@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+<test name="BDD-Test">
+   <parameter name="scenario.file.loc" value="src/main/resources/resources/bdd-scenarios" />
+   <parameter name="step.provider.pkg" value="qa.af.bdd.stepdef" />
+ 
+   <classes>
+      <class name="com.qmetry.qaf.automation.step.client.text.BDDTestFactory2" />
+   </classes>
+</test>
+</suite>

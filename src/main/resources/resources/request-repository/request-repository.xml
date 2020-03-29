@@ -1,0 +1,20 @@
+<requestrepository>
+  <sample>
+    <reqwithbody1>
+    	   <baseUrl>http://dummy.restapiexample.com/api/v1</baseUrl>
+       <endPoint>/employees</endPoint>
+       <method>GET</method>
+     </reqwithbody1>
+    <!-- using CDATA to provide inline xml body
+    <reqwithbody2>
+       <endPoint>/myservice-endpoint</endPoint>
+       <headers>{'Content-Type': 'application/xml'}</headers>
+      <body>
+          <![CDATA[
+            <message> here is xml body!... </message>
+          ]]>
+      </body>
+    </reqwithbody2>-->
+
+  </sample>
+</requestrepository>
