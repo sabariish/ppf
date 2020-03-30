@@ -1,11 +1,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
   
-<suite name="Suite1" verbose="1" >
+<suite name="Suite1" verbose="1" parallel="methods" thread-count="3">
   
- 
-  <test name="Regression1">
+ <listeners>
+        <listener
+          class-name="qa.af.common.utils.ParallelExecutionHelper"/>
+    </listeners>
+  <test name="Regression1" group-by-instances="true">
     <classes>
       <class name="qa.af.bdd.stepdef.ChromeBrowser"/>
     </classes>
   </test>
+  
 </suite>
